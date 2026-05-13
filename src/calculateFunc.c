@@ -213,9 +213,10 @@ node* current=start;
         current=start;
     while(current != stop->next){
         if(current->operator=='/')
-            current=divide(current->prev, current->next);
-            if(current==NULL)
-            return NULL;
+          current=divide(current->prev, current->next);
+
+        if(current==NULL)
+          return NULL;
 
       current=current->next;
     }
