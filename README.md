@@ -47,5 +47,5 @@ This project uses a `Makefile` for easy compilation.
 ### Building the Project
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Scientific_calculator.git
+   git clone https://github.com/Dani-uC/Scientific_calculator.git
    cd Scientific_calculator
