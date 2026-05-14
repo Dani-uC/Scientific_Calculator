@@ -188,6 +188,7 @@ node* current=start;
     while(current != stop->next){
         if(current->operator=='N' && current->middle!=NULL)
          specialFunc(current);
+         current->middle=NULL;
       current=current->next;
     }
     current=start;

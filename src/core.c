@@ -16,14 +16,12 @@ int syntaxCheck(char * string){
     //mathematical expression cannot begin with any of the these
     if(string[0]=='*' || string[0]=='/' || islower(string[length-1]) || string[0]=='z' || string[0]=='n' || string[0]=='s')
         return 0;
-    
 
     for(int i=0;i<length; i++){
         if(islower(string[i])){
             if((string[i]==string[i+1]) )
             return 0;
         }
-        
         
 
         if(string[i]=='+' || string[i]=='/' || string[i]=='*' || string[i]=='-' || string[i]=='z' || string[i]=='n' || string[i]=='s' || string[i]=='.'){
@@ -80,9 +78,6 @@ node* listFormer(char* string){
     node* tail=NULL;
 
     for(int i=0; i < (strlen(string)); i++){
-
-
-
         if(isdigit(string[i]) || string[i]=='.'){
             buffer[index]=string[i];
             index++;
@@ -178,17 +173,9 @@ node* listFormer(char* string){
             } 
 
         }
-
-
-
-    
- 
     }
     node_no=0;
 
-
-    
-    
     return head;
 }
 
