@@ -97,8 +97,32 @@ This function takes in the buffer and makes sure that the mathematical syntax ar
 ### listFormer:
 This function takes in the buffer array and parses it into a doubly linked list.each number,operator and parenthesis are placed in a new node.
 
-The list is linked in such a way that all operators that require two operands and operands are in the main list.while a branch node is attached to operands that require special functions of single variable
-
+The list is linked in such a way that all operators that require two operands and operands are in the main list.while a branch node is attached to operands that require special functions of single variable as a singly linked list.
 
 
 ![Alt](images/linkedList.png)
+
+`NULL` tells the loops where the list ends while trasversing
+
+### addMultiplication:
+This function add multiplication between numbers and `(` and also between numbers.
+
+```bash
+2(4) --- 2*(4)
+5a30 --- 5*a30
+```
+**note:** It doesn't add multiplication to special function operators that require two operands `n s and z` .
+
+### Calculate:
+This function takes two point in the doubly linked,resolves them and stores the answer in the starting node.It does not account for parentheses but resolves all special functions and arithmetic operations by calling other functions.
+
+After storing the answer the lists is reorganized to bypass nodes that are no longer relevant (operators and the second operands),After which the bypassed and branch nodes are freed.
+
+### estimate:
+This is a recursive function that invokes itself whenever it meets a `(` node.The `(` node represent the begining of a new scope, The estimate function trasverses the list and stops whenever it reaches the `)` node and then calls the calculate function from the node after `(` to the node before `)` OR it recurses if it hits a `(` before the respective `)`.
+
+This recursion accounts for nested and multiple parentheses scope,note that the parentheses amount must be even and each `(` must have a respective `)`
+
+If there are no parentheses in the list it just calls the calculate function and return the answer to the main function.
+
+![Alt](images/estimate.png)
