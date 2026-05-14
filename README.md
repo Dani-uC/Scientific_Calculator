@@ -84,3 +84,21 @@ This project uses a `Makefile` for easy compilation.
 
 
 ![Alt](images/bash2.png)
+
+
+## Documentation
+
+### getInput:
+ The process begins from the `getInput` function. Input is taken from the console using `fgets` and is stored in `local buffer` array of strings, after which it is copied into the argument (buffer), while copying , escape sequence and white spaces are removed.
+
+### syntaxCheck:
+This function takes in the buffer and makes sure that the mathematical syntax are in a form that can be parsed and estimaded by the calculator
+
+### listFormer:
+This function takes in the buffer array and parses it into a doubly linked list.each number,operator and parenthesis are placed in a new node.
+
+The list is linked in such a way that all operators that require two operands and operands are in the main list.while a branch node is attached to operands that require special functions of single variable
+
+
+
+![Alt](images/linkedList.png)
