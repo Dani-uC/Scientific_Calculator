@@ -1,5 +1,5 @@
 CC=cc
-CFLAGS= -Wall -Wextra -g 
+CFLAGS= 
 SRC=$(wildcard src/*.c)
 LDFLAGS= -lm
 BUILD_DIR=build
