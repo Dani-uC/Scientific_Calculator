@@ -72,15 +72,15 @@ This project uses a `Makefile` for easy compilation.
 
 3. Run the program:
 
-   
 
 ```bash
-   git clone https://github.com/Dani-uC/Scientific_calculator.git
+./Calculator #linux or MacOS
 
-   cd Scientific_calculator
+./Calulator.exe #windows
+
 
    ```
 ![Alt](images/bash1.png)
 
 
-
+![Alt](images/bash2.png)
