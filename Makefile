@@ -4,7 +4,18 @@ SRC=$(wildcard src/*.c)
 LDFLAGS= -lm
 BUILD_DIR=build
 OBJ=$(SRC:src/%.c=$(BUILD_DIR)/%.o)
-TARGET=$(BUILD_DIR)/Calculator
+TARGET=$(BUILD_DIR)/Calculator$(EXE)
+
+
+ifeq ($(DETECTED_OS),Windows)
+    EXE = .exe
+    RM = del /Q
+    MKDIR = mkdir
+else
+    EXE =
+    RM = rm -rf
+    MKDIR = mkdir -p
+endif
 
 
 
@@ -17,11 +28,11 @@ $(BUILD_DIR)/%.o:src/%.c |$(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
+	$(MKDIR) -p $(BUILD_DIR)
 
 
 clean:
-	rm -rf $(BUILD_DIR)/
+	$(RM) $(BUILD_DIR)/
 
 .PHONY: all clean
 

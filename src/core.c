@@ -10,7 +10,7 @@
 
 
 int syntaxCheck(char * string){
-    int parentheses_open=0,parentheses_close=0,consecutive=0,hold;
+    int parentheses_open=0,parentheses_close=0,consecutive=0;
     int length = strlen(string);
 
     //mathematical expression cannot begin with any of the these
