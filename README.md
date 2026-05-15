@@ -119,7 +119,7 @@ This function takes two point in the doubly linked,resolves them and stores the 
 After storing the answer the lists is reorganized to bypass nodes that are no longer relevant (operators and the second operands),After which the bypassed and branch nodes are freed.
 
 ### estimate:
-This is a recursive function that invokes itself whenever it meets a `(` node.The `(` node represent the begining of a new scope, The estimate function trasverses the list and stops whenever it reaches the `)` node and then calls the calculate function from the node after `(` to the node before `)` OR it recurses if it hits a `(` before the respective `)`.
+This is a recursive function that invokes itself whenever it meets a `(` node.The `(` node represent the begining of a new scope, The estimate function traverses the list and stops whenever it reaches the `)` node and then calls the calculate function from the node after `(` to the node before `)` OR it recurses if it hits a `(` before the respective `)`.
 
 This recursion accounts for nested and multiple parentheses scope,note that the parentheses amount must be even and each `(` must have a respective `)`
 
