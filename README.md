@@ -81,7 +81,7 @@ This project uses a `Makefile` for easy compilation.
 
 ./Calculator help #To view symbols and program description (linux or MacOS)
 
-./Calulator.exe #To view symbols and program description (windows)
+./Calulator.exe help #To view symbols and program description (windows)
 
 
 
