@@ -120,6 +120,7 @@ node* listFormer(char* string){
                         }
                          else{
                     printf("***************malloc Error***************");
+                    exit(0);
                 }
                     }
 
@@ -127,6 +128,7 @@ node* listFormer(char* string){
                 }
                 else{
                     printf("***************malloc Error***************");
+                    exit(0);
                 }
                 index=0;  
             }
@@ -142,7 +144,6 @@ node* listFormer(char* string){
                     currnode->middle=NULL;
 
                     currnode->operator=string[i];
-                    //printf("%c\n",currnode->operator);
                     if(node_no==1)
                         head=currnode;
                     else
@@ -154,6 +155,7 @@ node* listFormer(char* string){
                 }
                 else{
                     printf("***************malloc Error***************");
+                    exit(0);
                 } 
                 if(string[i]=='(' && (string[i-1]!='s' || string[i-1]!='n' || string[i-1]!='z')){
 
@@ -169,6 +171,7 @@ node* listFormer(char* string){
                         }
                          else{
                     printf("***************malloc Error***************");
+                    exit(0);
                 }
             } 
 
