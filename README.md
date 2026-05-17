@@ -79,6 +79,13 @@ This project uses a `Makefile` for easy compilation.
 ./Calulator.exe #windows
 
 
+./Calculator help #To view symbols and program description (linux or MacOS)
+
+./Calulator.exe #To view symbols and program description (windows)
+
+
+
+
    ```
 ![Alt](images/bash1.png)
 
